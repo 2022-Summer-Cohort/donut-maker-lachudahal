@@ -1,0 +1,165 @@
+body{
+    background-image: url("/image/background.jpg");
+    width: 100%;
+    height: 100vh;
+    background-position:contain;
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.container{
+    background-color: rgba(135, 206, 250, 0.253);
+    font-size: 24px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;   
+}
+.company .companydetail {
+    visibility: hidden;
+    width: 300px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px ;
+    position: absolute;
+    z-index: 1;
+  }
+.company:hover .companydetail {
+    visibility: visible;
+}
+.inspirationBtn .inspirationtool {
+    visibility: hidden;
+    width: 300px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px ;
+    position: absolute;
+    z-index: 1;
+  }
+.inspirationBtn:hover .inspirationtool {
+    visibility: visible;
+}
+.contactbtn .contactInfo {
+    visibility: hidden;
+    width: 300px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px ;
+    position: absolute;
+    z-index: 1;
+  }
+.contactbtn:hover .contactInfo {
+    visibility: visible;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+}
+.sectionLeft{
+    padding-left: 25%;
+    
+}
+.sectionRight{
+    padding-top: 10%;
+    padding-left: 15%;
+    width: 18%;
+}
+.donut{
+    margin-left: 60%;
+    font-size: 24px;
+    margin-top: 0%;
+}
+.clickerContainer{
+    margin-left: 20%;
+}
+.shopButton {
+    background-color: rgba(173, 216, 230, 0.918);
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+}
+.shopButton:hover{
+    background-color: lightcyan;
+    transition: all .2s ease-in-out;
+}
+.shopButton #autoimage{
+    width: 30%;
+}
+.shopButton #multiplierimage{
+    width: 30%;
+}
+.shopButton img{
+    height: 64px;
+    width: 64px;
+}
+.shopButton #nameAndCost p {
+    margin: 0px;
+    width: 100%;
+}
+#buyautoclicker{
+    font-size: 24px;
+}
+#buymultiplier{
+    font-size: 24px;
+}
+.shopButton #amount {
+    font-size: 48px;
+    font-family: roboto;
+    width: 15%;
+}
+
+.autoClicker{
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px; 
+    height: 100px;
+} 
+.clickMultiplier{
+    display: flex; 
+    flex-direction: row;
+    border: solid black;
+    border-radius: 10px;
+    padding: 10px; 
+    margin: 20px;  
+    height: 100px;
+}
+#img{
+    position: relative;
+    transition: all .2s ease-in-out;
+    height: 600px;
+    animation: rotation 10s infinite linear; 
+} 
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+} 
+.clickerContainer img:hover{
+    transform: scale(1.10);
+}
+.clickerContainer img:active{
+    transform: scale(0.99);
+}
+#resetgame{
+    text-align: center;
+    font-size: 24px;
+}
+
+

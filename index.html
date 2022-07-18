@@ -1,13 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donut Clicker</title>
-  </head>
-  <body>
-    <div class="container"></div>
-    <script src="./index.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Donut Clicker</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="header">
+      <section class="navigation-menu">
+        <h1 class="company">Fred The Baker Baking <br> <br>
+        <span class="companydetail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Perferendis dolor dolorem possimus rem animi accusantium voluptatibus, sapiente quia harum dolorum,
+           laborum quo aliquid, autem cum incidunt. Ab libero maxime molestias!</span></h1>
+      </section>
+      <section class="inspirationInfo">
+        <h1 class=inspirationBtn>Inspiration <br> <br>
+          <span class="inspirationtool">The inspiration for this game, Cookie Clicker</span></h1>
+      </section>
+      <section class="contact">
+        <h1 class="contactbtn">Contact <br> <br>
+          <span class="contactInfo">Github</p>
+          <p class="contactInfo">LinkedIn</span>
+        </h1>
+      </section>
+    </nav>
+  </div>
+  <main class="main">
+    <div class="sectionLeft">
+      <div class="donutsContainer">
+        <section class="donut">
+          <h2 id="donutclick">Donuts</h2>
+          <!-- <p id="clickpersecond">click per second</p>  -->
+        </section>
+      </div>  
+        <div class="clickerContainer">
+          <img src="./image/donut.png" id="img">
+        </div>
+    </div>
+    
+  <div class="sectionRight">
+    <section id="autoshobutton">
+      <table class="shopButton">
+        <tr>
+          <td id="autoimage"><img src="/image/autoclicker.png" ></td>
+          <td id="nameAndCost">
+            <p id="buyautoclicker">Auto Clicker</p> <br> <br> 
+            <p><span id="autoclickercost">100</span> Donuts</p>
+          </td>
+          <td id="amount"><span id="autoclicker">0</span></td>
+        </tr>
+      </table>
+    </section>
+      <section id="multiplershobutton">
+      <table class="shopButton">
+        <tr>
+          <td id="multiplierimage"><img src="/image/multiplier.png"></td>
+          <td id="nameAndCost">
+            <p id="buymultiplier">Multiplier</p><br> <br>
+            <p><span id="multipliercost">10</span> Donuts</p>
+          </td>
+          <td id="amount"><span id="multiplier">0</span></td>
+        </tr>
+      </table>
+    </section>
+    <section id="resetgamebutton">
+      <table class="shopButton">
+        <tr>
+          <td id="name">
+            <p id="resetgame">Reset Game<br>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </div>
+  </main>
+  <script src="./index.js" type="module"></script>
+</body>
+
 </html>
