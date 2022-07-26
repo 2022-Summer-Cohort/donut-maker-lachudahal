@@ -1,15 +1,8 @@
 body{
-    background-image: url("/image/background.jpg");
-    width: 100%;
-    height: 100vh;
-    background-position:contain;
-    background-size:cover;
-    background-repeat: no-repeat;
-    overflow: hidden;
+    background-color: #99aaaa;
 }
-
 .container{
-    background-color: rgba(135, 206, 250, 0.253);
+    background-color: #6a7c7c;
     font-size: 24px;
 }
 .header{
@@ -21,7 +14,7 @@ body{
 .company .companydetail {
     visibility: hidden;
     width: 300px;
-    background-color: white;
+    background-color: #99aaaa;
     color: black;
     text-align: center;
     border-radius: 10px;
@@ -35,7 +28,7 @@ body{
 .inspirationBtn .inspirationtool {
     visibility: hidden;
     width: 300px;
-    background-color: white;
+    background-color: #99aaaa;
     color: black;
     text-align: center;
     border-radius: 10px;
@@ -49,8 +42,7 @@ body{
 .contactbtn .contactInfo {
     visibility: hidden;
     width: 300px;
-    background-color: white;
-    color: black;
+    background-color: #99aaaa;
     text-align: center;
     border-radius: 10px;
     padding: 10px ;
@@ -83,14 +75,14 @@ body{
     margin-left: 20%;
 }
 .shopButton {
-    background-color: rgba(173, 216, 230, 0.918);
+    background-color: #86adad;
     transition: all .2s ease-in-out;
     border-radius: 10px;
     width: 100%;
     margin: 10px 0px 10px 0px;
 }
 .shopButton:hover{
-    background-color: lightcyan;
+    background-color: #a8c2c2;
     transition: all .2s ease-in-out;
 }
 .shopButton #autoimage{
@@ -139,18 +131,18 @@ body{
 }
 #img{
     position: relative;
-    transition: all .2s ease-in-out;
+    transition: all .1s ease-in-out;
     height: 600px;
     animation: rotation 10s infinite linear; 
 } 
-@keyframes rotation {
+/* @keyframes rotation {
     from {
       transform: rotate(0deg);
     }
     to {
       transform: rotate(360deg);
-    }
-} 
+    } */
+/* }  */
 .clickerContainer img:hover{
     transform: scale(1.10);
 }

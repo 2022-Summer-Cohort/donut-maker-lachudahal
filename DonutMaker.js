@@ -1,10 +1,12 @@
 export default class DonutMaker{
-    constructor(donut, autoClicker, multiplier, ){
+    constructor(donut, autoClicker, multiplier, enableAutoClicker, enableMultiplier){
         this._donut = donut;
         this._autoClicker = autoClicker;
         this._multiplier = multiplier;
         this._autoClickerCost = 100;
         this._multiplierCost = 10;
+        this._enableAutoClicker = enableAutoClicker||false;
+        this._enableMultiplier = enableMultiplier || false;
     }
     get donut(){
         return parseFloat((this._donut).toFixed(4));
@@ -16,10 +18,10 @@ export default class DonutMaker{
         return this._multiplier;
     }
     get autoClickerCost(){
-        return pharseFloat((this._autoClickerCost).toFixed(4));
+        return pharseFloat((this._autoClickerCost).toFixed(2));
     }
     get multiplierCost(){
-        return pharseFloat((this._multiplierCost).toFixed(4));
+        return pharseFloat((this._multiplierCost).toFixed(2));
     }
     addToDonut(){
         if(this.multiplier >= 1){
@@ -32,29 +34,31 @@ export default class DonutMaker{
     }
     buyAutoclicker(){
         if(this._donut >= this._autoClickerCost){
-            this._donut = this.donut - this._autoClickerCost;
+            this._donut -= this._autoClickerCost;
             this._autoClicker++;
-            this._autoClickerCost = this._autoClickerCost + (this._autoClickerCost * 0.1);
+            this._autoClickerCost += (this._autoClickerCost * 0.1);
         }
     }
     buyMultiplier(){
         if(this._donut >= this._multiplierCost){
+            this._donut -= this._multiplierCost;
             this._multiplier++;
-            this._donut = this._donut - this._multiplierCost;
-            this._multiplierCost = this._multiplierCost + (this._multiplierCost * 0.1);
+            this._multiplierCost += (this._multiplierCost * 0.1);
         }
     }
-
-    updateClickPerSecond(){
-        if(this._autoClicker > 0 || this._multiplier){
-            this._donut += this._autoClicker * Math.pow(1.2, this._multiplier);
-        }
-        return this._donut;
-    }
+    // updateClickPerSecond(){
+    //     if(this._autoClicker > 0 || this._multiplier > 0){
+    //         this._donut += this._multiplier * Math.pow(1.2, this._autoClicker);
+    //     }
+    //     return this._donut;
+        
+    // }
 
     resetGame(){
         this._donut = 0;
         this._autoClicker = 0;
         this._multiplier = 0;
+        this._autoClickerCost = 100;
+        this._multiplierCost = 10;
     }
-}
+}   
